@@ -1,39 +1,47 @@
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
 
+    /* HEADER */
     header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
-    main{
+    /* MAIN */
+    main {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
-    
-
-    h2{
-        font-size: 38px;
+    /* TITULOS */
+    h2 {
+        font-size: 28px;
     }
 
-    form{
-        margin: 0 auto;
+    /* FORMULÁRIO */
+    form {
         width: 100%;
-        
+        margin: 20px 0;
     }
 
-    input{
-        align-self: center;
-
+    /* INPUTS E BOTÃO */
+    input, button {
+        width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
     }
 
-    img{
-        flex-direction: center;
+    /* IMAGEM */
+    img {
+        width: 100%;
+        height: auto;
         margin-top: 20px;
-        width: 30%;
+        border-radius: 10px;
     }
 
-
-
-
+    /* ESPAÇAMENTO GERAL */
+    body {
+        padding: 10px;
+    }
 }

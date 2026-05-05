@@ -55,4 +55,3 @@ function confirmarPresenca(event) {
     document.getElementById("resposta").innerText =
         "Presença confirmada, " + nome + "! 🎉";
 }
-

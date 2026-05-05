@@ -152,8 +152,7 @@ img[alt="20 anos"]{
 }
 
 #informações {
-    align-items: colunm;
+    align-items: column;
     justify-content: space-between;
     gap: 40px;
 }
-
