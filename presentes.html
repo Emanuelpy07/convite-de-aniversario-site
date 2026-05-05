@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Presentes</title>
+    <link rel="stylesheet" href="styles/presentes.css">
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="voltar">← Voltar</a>
+    
+</header>
+
+<section class="container">
+
+    <h1>🎁 Escolha um Presente</h1>
+    <p>Escolha uma opção para me presentear 😄</p>
+
+    <div class="grid">
+
+        <div class="card" onclick="escolher('Camiseta do Brasil GG')">
+            Camiseta do Brasil (GG)
+        </div>
+
+        <div class="card" onclick="escolher('Perfume Malbec')">
+            Perfume Malbec
+        </div>
+
+        <div class="card" onclick="escolher('iPhone')">
+            iPhone
+        </div>
+
+        <div class="card" onclick="escolher('Calça Cargo 46')">
+            Calça Cargo (46)
+        </div>
+
+        <div class="card" onclick="escolher('Tênis Nike 42')">
+            Tênis Nike (42)
+        </div>
+
+        <div class="card" onclick="escolher('Blusa de frio com capuz')">
+            Blusa de frio com capuz
+        </div>
+
+    </div>
+
+    <p id="mensagem"></p>
+
+</section>
+
+<script src="scripts/presentes.js"></script>
+
+
+<article>
+    <img src="./componentes/images/ninguemtaperguntando.jpeg" alt="ninguém-ta-perguntando">
+</article>
+
+</body>
+</html>

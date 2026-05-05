@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Convidados</title>
+
+    <style>
+        body {
+            background: black;
+            color: #FFD700;
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            border: 1px solid #FFD700;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Lista de Convidados</h1>
+<p id="total"></p>
+
+<div id="lista"></div>
+
+<script>
+let lista = JSON.parse(localStorage.getItem("confirmacoes")) || [];
+
+let div = document.getElementById("lista");
+let total = document.getElementById("total");
+
+// mostra total
+total.innerText = "Total de confirmados: " + lista.length;
+
+// mostra pessoas
+if (lista.length === 0) {
+    div.innerHTML = "<p>Ninguém confirmou ainda.</p>";
+} else {
+    lista.forEach(pessoa => {
+        div.innerHTML += `
+            <div class="card">
+                <strong>${pessoa.nome}</strong><br>
+                ${pessoa.email}
+            </div>
+        `;
+    });
+}
+
+</script>
+
+<button onclick="limpar()">Limpar tudo</button>
+
+<script>
+function limpar() {
+    localStorage.removeItem("confirmacoes");
+    location.reload();
+}
+</script>
+
+<button onclick="limpar()">Limpar tudo</button>
+<button onclick="liberarPresentes()">Liberar presentes</button>
+
+<script>
+function limpar() {
+    localStorage.removeItem("confirmacoes");
+    location.reload();
+}
+
+function liberarPresentes() {
+    localStorage.removeItem("presentesUsados");
+    localStorage.removeItem("presenteEscolhido");
+
+    alert("Presentes liberados novamente 🔓");
+}
+</script>
+
+
+</body>
+</html>

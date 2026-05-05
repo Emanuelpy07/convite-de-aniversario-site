@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="styles/style.css" rel="stylesheet">
+   <link href="styles/fonts.css" rel="stylesheet">
+   <link href="styles/media.css" rel="stylesheet">
+    <script src="./scripts/presentes.js"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <header>
+        <div id="tittle">
+            <h1>Convite</h1>
+            <h1>de Aniversário</h1>
+        </div>
+
+        <ul>
+            <a href="#"><li>Convite</li></a>
+            <a href="#local" id="local-btn"><li>Local</li></a>
+            <a href="./presentes.html"><li>Presentes</li></a>
+             <a href="#informações"id="informações-btn"><li>Informações</li></a>
+        </ul>
+    
+    </header>
+       <main>
+        <aside>
+            <h2><span>Aniversário</span></h2>
+            <h2>do Emanuel</h2>
+            <p>Seja bem vindo ao Convite de Aniversário do Emanuel! Neste ano ele irá completar 20 years, e você é mais do que especial! Neste site você poderá saber o local do aniversário, confirmar sua presença, entender melhor quem é o Emanuel sobre presentes que ele gosta e também entender como irá funcionar o evento! Para ir a um tema específico, só apertar no tema que você quer na parte superior da página. Boa Navegação!</p><br>
+            <p>Aqui você pode confirmar sua presença no evento!</p>
+
+            <form onsubmit="confirmarPresenca(event)">
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="email" id="email" placeholder="Email">
+    <input type="submit" value="Confirmar Presença">
+</form>
+
+<p id="resposta"></p>
+        </aside>
+        <article>
+            <img src="./componentes/images/WhatsApp Image 2026-05-03 at 20.24.15.jpeg" alt="Emanuel">
+        </article>
+       </main>
+
+       <!--- Informações sobre o evento-->
+       <section id="informações">
+    <h2> Como será o evento?</h2>
+    <p>O Aniversário será em uma casa onde haverá uma piscina aquecida, para todos convidados, então levem roupas para molhar, e lembre-se sem roupas vulgar, transparentes e brancas.</p><br>
+    <h3>Horário do Aniversário</h3>
+    <p>O Horário do evento será das 14:00 às 19h30.</p>
+    <article>
+        <img src="./componentes/images/WhatsApp Image 2026-05-01 at 14.48.50.jpeg" alt="20 anos">
+    </article>
+    
+    
+</section>
+
+<section id="local">
+    <h2> Onde será o evento?</h2>
+<p>O evento será realizado no endereço que "R. Mario Martins, 117 - Jardim Bonifacio" para facilitar sua vida para encontrar a rota, aperte o "Ver no Google Maps" onde irá te levar diretamente para o endereço no maps. </p><br>
+    <a href="https://maps.app.goo.gl/TgK6DTJSZNPTdnSy7" target="_blank">Ver no Google Maps</a>
+     <article>
+        <img src="./componentes/images/WhatsApp Image 2026-05-01 at 14.48.50 (2).jpeg" alt="20 anos">
+    </article>
+</section>
+
+
+
+    <script>let presente = localStorage.getItem("presenteEscolhido");
+
+if (presente) {
+    console.log("Presente escolhido:", presente);
+} 
+</script>
+
+
+</body>
+</html>
