@@ -1,0 +1,89 @@
+body {
+    background: black;
+    color: #FFD700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+}
+
+.voltar {
+    color: #FFD700;
+    text-decoration: none;
+    border: 1px solid #FFD700;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    background: #FFD700;
+    color: black;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    border: 1px solid #FFD700;
+    padding: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+
+    /* animação inicial */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 0.8s forwards;
+
+    transition: 0.3s;
+}
+
+/* delay diferente pra cada card */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* efeito hover */
+.card:hover {
+    transform: translateY(-10px);
+    background: #FFD700;
+    color: black;
+}
+
+#mensagem {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    margin-top: -50px;
+    width: 50%;
+}
